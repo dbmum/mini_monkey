@@ -46,9 +46,9 @@ func _physics_process(delta):
             swing_direction = 'left'
     if Input.is_action_pressed("swing1"):
         # Basic rough swing effect
-        #var direction_to_hand = global_position.direction_to(hand_node.global_position)
-        #global_position = global_position + (direction_to_hand * pull_speed) 
+        var direction_to_hand = global_position.direction_to(hand_node.global_position)
+        global_position = global_position + (direction_to_hand * pull_speed) 
         
-        velocity = Vector2(0,0)
-        velocity.y += gravity * delta
+        #velocity = Vector2(0,0)
+        #velocity.y += gravity * delta
         
