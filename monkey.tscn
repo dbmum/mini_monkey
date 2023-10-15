@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn8qxaagby8a0"]
+
+[ext_resource type="Texture2D" uid="uid://bhuj6g2dd6jmo" path="res://icon.svg" id="1_1uksu"]
+[ext_resource type="Script" path="res://monkey.gd" id="1_rvj31"]
+[ext_resource type="PackedScene" uid="uid://oojiexy3hbgo" path="res://hand.tscn" id="3_ujirb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtgpy"]
+size = Vector2(122, 122)
+
+[node name="monkey" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_rvj31")
+JUMP_VELOCITY = -500.0
+max_jumps = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_rtgpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1uksu")
+
+[node name="hand" parent="." instance=ExtResource("3_ujirb")]
+position = Vector2(0, 102)
+main_node = NodePath("..")
