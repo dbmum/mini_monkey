@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="mini_monkey"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://directors/main_director.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 

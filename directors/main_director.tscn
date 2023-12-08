@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcal3h4uduq3r"]
+
+[ext_resource type="Script" path="res://directors/main_director.gd" id="1_cpwrg"]
+[ext_resource type="AudioStream" uid="uid://6cpuoaobo2uh" path="res://play/level_tools/521607__code_box__minimalist-monkey.wav" id="2_wrkxx"]
+
+[node name="main_director" type="Node"]
+script = ExtResource("1_cpwrg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_wrkxx")
+volume_db = -1.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

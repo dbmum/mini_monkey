@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://oojiexy3hbgo"]
+
+[ext_resource type="Script" path="res://play/monkey/hand.gd" id="1_y8h1m"]
+[ext_resource type="Texture2D" uid="uid://bap1dnf2x3ibo" path="res://play/monkey/monkey_hand.png" id="2_lo8mj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ge6vo"]
+radius = 18.2483
+
+[node name="hand" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_y8h1m")
+main_node = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ge6vo")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1, 10)
+scale = Vector2(0.18663, 0.180807)
+texture = ExtResource("2_lo8mj")
