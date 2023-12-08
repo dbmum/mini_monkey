@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 
 @export var SPEED = 300.0
-@export var JUMP_VELOCITY = -400.0
+@export var JUMP_VELOCITY = -500.0
 @export var max_jumps = 2
-@export var pull_speed = 10
+@export var pull_speed = 12
 var num_jumps = 2
 var hand_node
 var swing_direction

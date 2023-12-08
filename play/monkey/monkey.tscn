@@ -12,9 +12,7 @@ height = 120.0
 [node name="monkey" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_rhr2d")
-JUMP_VELOCITY = -500.0
 max_jumps = 1
-pull_speed = 12
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.5, -0.499985)
